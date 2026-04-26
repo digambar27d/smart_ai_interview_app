@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import '../data/interview_data.dart';
 import '../providers/stats_provider.dart';
 import '../theme/app_theme.dart';
@@ -19,8 +20,8 @@ class TopicInterviewScreen extends StatefulWidget {
 }
 
 class _TopicInterviewScreenState extends State<TopicInterviewScreen> {
-  // 🔑 Apni Gemini API key yahan daalo
-  static const _apiKey = 'AIzaSyCrRQWUdZJ0JwRjh6GV8AEUcunsfxEMEpw';
+  // 🔑 Get API key from .env file
+  static String get _apiKey => dotenv.env['GEMINI_API_KEY'] ?? '';
 
   late final List<Map<String, String>> _questions;
   int _index = 0;

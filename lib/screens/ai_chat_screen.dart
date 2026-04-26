@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import '../theme/app_theme.dart';
 
 class AiChatScreen extends StatefulWidget {
@@ -10,8 +11,8 @@ class AiChatScreen extends StatefulWidget {
 }
 
 class _AiChatScreenState extends State<AiChatScreen> {
-  // 🔑 Apni Gemini API key yahan daalo
-  static const _apiKey = 'AIzaSyCrRQWUdZJ0JwRjh6GV8AEUcunsfxEMEpw';
+  // 🔑 Get API key from .env file
+  static String get _apiKey => dotenv.env['GEMINI_API_KEY'] ?? '';
 
   final List<Map<String, String>> _messages = [];
   final List<Map<String, dynamic>> _history = [];

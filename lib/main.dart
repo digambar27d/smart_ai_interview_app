@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'providers/auth_provider.dart';
 import 'providers/stats_provider.dart';
 import 'screens/home_screen.dart';
@@ -12,6 +13,12 @@ import 'theme/app_theme.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
+  try {
+    await dotenv.load(fileName: ".env");
+  } catch (e) {
+    debugPrint("Dotenv load error: $e");
+  }
+
   try {
     // Initializing Firebase for Android using google-services.json
     await Firebase.initializeApp();
