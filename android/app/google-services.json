@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "221377232515",
+    "project_id": "smart-ai-interview-a8308",
+    "storage_bucket": "smart-ai-interview-a8308.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221377232515:android:c2ec77378709438a4025b6",
+        "android_client_info": {
+          "package_name": "com.example.smart_ai_interview_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLp6R6USSSID2njn9uArNQ_QlGVZrZKLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
